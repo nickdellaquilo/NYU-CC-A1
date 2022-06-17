@@ -13,15 +13,29 @@
         <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
         <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
         <script type="text/javascript" src="apigClient.js"></script>
+
+        <script type="text/javascript">
+            function getAnswers() {
+                var apiUrl = "https://7apdwivt4c.execute-api.us-east-1.amazonaws.com/development/"
+                fetch(apiUrl).then(response => {
+                    return response.json();
+                }).then(data => {
+                    console.log(data);
+                }).catch(err => {
+                    console.log(console.error())
+                });
+            }
+        </script>
+
     </head>
     <body>
-        <h1>Assignment 1</h1>
+        <h1>Assignment 2</h1>
         <hr>
         <input type="text">
         <input type="submit" value="Post questions">
         <br>
         <input type="text">
-        <input type="submit" value="Show answers">
+        <input type="submit" value="Show answers" onclick="window.alert(getAnswers())">
 
 
 
