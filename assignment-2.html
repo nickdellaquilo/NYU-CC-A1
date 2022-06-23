@@ -21,6 +21,8 @@
                     return response.json();
                 }).then(data => {
                     console.log(data);
+                }).then(data => {
+                    alert("Application under development. Search functionality will be implemented in Assignment 3");
                 }).catch(err => {
                     console.log(console.error())
                 });
@@ -35,7 +37,7 @@
         <input type="submit" value="Post questions">
         <br>
         <input type="text">
-        <input type="submit" value="Show answers" onclick="window.alert(getAnswers())">
+        <input type="submit" value="Show answers" onclick="getAnswers()">
 
 
 
